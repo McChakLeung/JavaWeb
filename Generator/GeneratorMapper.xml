@@ -40,28 +40,29 @@
         </javaClientGenerator>
 
         <!-- 数据库表名及对应的Java模型类名 -->
-        <table tableName="t_account_type_cert" domainObjectName="AccountTypeCert"></table>
-        <table tableName="t_advertisement" domainObjectName="Advertisement"></table>
-        <table tableName="t_cert" domainObjectName="Cert"></table>
-        <table tableName="t_dictionary" domainObjectName="Dictionary"></table>
-        <table tableName="t_member" domainObjectName="Member"></table>
-        <table tableName="t_member_address" domainObjectName="MemberAddress"></table>
-        <table tableName="t_member_cert" domainObjectName="MemberCert"></table>
-        <table tableName="t_member_project_follow" domainObjectName="MemberProjectFollow"></table>
-        <table tableName="t_message" domainObjectName="Message"></table>
-        <table tableName="t_order" domainObjectName="Order"></table>
-        <table tableName="t_param" domainObjectName="Param"></table>
-        <table tableName="t_permission" domainObjectName="Permission"></table>
-        <table tableName="t_project" domainObjectName="Project"></table>
-        <table tableName="t_project_tag" domainObjectName="ProjectTag"></table>
-        <table tableName="t_project_type" domainObjectName="ProjectType"></table>
-        <table tableName="t_return" domainObjectName="Return"></table>
-        <table tableName="t_role" domainObjectName="Role"></table>
-        <table tableName="t_role_permission" domainObjectName="RolePermission"></table>
-        <table tableName="t_tag" domainObjectName="Tag"></table>
-        <table tableName="t_type" domainObjectName="Type"></table>
-        <table tableName="t_user" domainObjectName="User"></table>
-        <table tableName="t_user_role" domainObjectName="UserRole"></table>
+        <table tableName="t_glyphicon" domainObjectName="Glyphicon"></table>
+        <!--<table tableName="t_account_type_cert" domainObjectName="AccountTypeCert"></table>-->
+        <!--<table tableName="t_advertisement" domainObjectName="Advertisement"></table>-->
+        <!--<table tableName="t_cert" domainObjectName="Cert"></table>-->
+        <!--<table tableName="t_dictionary" domainObjectName="Dictionary"></table>-->
+        <!--<table tableName="t_member" domainObjectName="Member"></table>-->
+        <!--<table tableName="t_member_address" domainObjectName="MemberAddress"></table>-->
+        <!--<table tableName="t_member_cert" domainObjectName="MemberCert"></table>-->
+        <!--<table tableName="t_member_project_follow" domainObjectName="MemberProjectFollow"></table>-->
+        <!--<table tableName="t_message" domainObjectName="Message"></table>-->
+        <!--<table tableName="t_order" domainObjectName="Order"></table>-->
+        <!--<table tableName="t_param" domainObjectName="Param"></table>-->
+        <!--<table tableName="t_permission" domainObjectName="Permission"></table>-->
+        <!--<table tableName="t_project" domainObjectName="Project"></table>-->
+        <!--<table tableName="t_project_tag" domainObjectName="ProjectTag"></table>-->
+        <!--<table tableName="t_project_type" domainObjectName="ProjectType"></table>-->
+        <!--<table tableName="t_return" domainObjectName="Return"></table>-->
+        <!--<table tableName="t_role" domainObjectName="Role"></table>-->
+        <!--<table tableName="t_role_permission" domainObjectName="RolePermission"></table>-->
+        <!--<table tableName="t_tag" domainObjectName="Tag"></table>-->
+        <!--<table tableName="t_type" domainObjectName="Type"></table>-->
+        <!--<table tableName="t_user" domainObjectName="User"></table>-->
+        <!--<table tableName="t_user_role" domainObjectName="UserRole"></table>-->
 
     </context>
 
