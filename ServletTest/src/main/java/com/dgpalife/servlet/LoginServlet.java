@@ -30,7 +30,7 @@ public class LoginServlet extends HttpServlet {
         //response.getWriter().write(value);
 
         response.getWriter().write(application.toString());
-        application.setAttribute("key","hello world");
+        //application.setAttribute("key","hello world");
         response.getWriter().write("\n");
         response.getWriter().write((String)application.getAttribute("key"));
     }
