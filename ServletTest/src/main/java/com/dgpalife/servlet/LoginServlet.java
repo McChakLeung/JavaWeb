@@ -18,21 +18,21 @@ public class LoginServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         //获取当前servlet的servletconfig对象
         //response.getWriter().write("Login");
-        ServletConfig servletConfig = this.getServletConfig();
-        String name = servletConfig.getServletName();
-        //Enumeration<String> names = servletConfig.getInitParameterNames();
-        //String value =servletConfig.getInitParameter(name);
-        ServletContext application = servletConfig.getServletContext();
-        response.getWriter().write(name);
-        response.getWriter().write("\n");
-        //response.getWriter().write(names.toString());
-        response.getWriter().write("\n");
-        //response.getWriter().write(value);
-
-        response.getWriter().write(application.toString());
-        //application.setAttribute("key","hello world");
-        response.getWriter().write("\n");
-        response.getWriter().write((String)application.getAttribute("key"));
+//        ServletConfig servletConfig = this.getServletConfig();
+//        String name = servletConfig.getServletName();
+//        //Enumeration<String> names = servletConfig.getInitParameterNames();
+//        //String value =servletConfig.getInitParameter(name);
+//        ServletContext application = servletConfig.getServletContext();
+//        response.getWriter().write(name);
+//        response.getWriter().write("\n");
+//        //response.getWriter().write(names.toString());
+//        response.getWriter().write("\n");
+//        //response.getWriter().write(value);
+//
+//        response.getWriter().write(application.toString());
+//        //application.setAttribute("key","hello world");
+//        response.getWriter().write("\n");
+//        response.getWriter().write((String)application.getAttribute("key"));
     }
 
 //    @Override
