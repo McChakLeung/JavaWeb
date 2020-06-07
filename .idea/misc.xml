@@ -1,14 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="FrameworkDetectionExcludesConfiguration">
+    <file type="web" url="file://$PROJECT_DIR$/Cookie" />
     <file type="web" url="file://$PROJECT_DIR$/Generator" />
     <file type="web" url="file://$PROJECT_DIR$/ServletTest" />
+    <file type="web" url="file://$PROJECT_DIR$/Session" />
   </component>
   <component name="MavenProjectsManager">
     <option name="originalFiles">
       <list>
         <option value="$PROJECT_DIR$/ServletTest/pom.xml" />
         <option value="$PROJECT_DIR$/Generator/pom.xml" />
+        <option value="$PROJECT_DIR$/Session/pom.xml" />
       </list>
     </option>
   </component>

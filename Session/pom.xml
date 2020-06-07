@@ -5,21 +5,18 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>com.dgpalife</groupId>
-  <artifactId>ServletTest</artifactId>
+  <artifactId>Session</artifactId>
   <version>1.0-SNAPSHOT</version>
-    <modules>
-        <module>../Cookie</module>
-    </modules>
-    <packaging>pom</packaging>
+  <packaging>war</packaging>
 
-  <name>ServletTest Maven Webapp</name>
+  <name>Session Maven Webapp</name>
   <!-- FIXME change it to the project's website -->
   <url>http://www.example.com</url>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <maven.compiler.source>1.8</maven.compiler.source>
-    <maven.compiler.target>1.8</maven.compiler.target>
+    <maven.compiler.source>1.7</maven.compiler.source>
+    <maven.compiler.target>1.7</maven.compiler.target>
   </properties>
 
   <dependencies>
@@ -32,12 +29,12 @@
     <dependency>
       <groupId>javax.servlet</groupId>
       <artifactId>javax.servlet-api</artifactId>
-      <version>3.1.0</version>
+      <version>RELEASE</version>
     </dependency>
   </dependencies>
 
   <build>
-    <finalName>ServletTest</finalName>
+    <finalName>Session</finalName>
     <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
       <plugins>
         <plugin>
