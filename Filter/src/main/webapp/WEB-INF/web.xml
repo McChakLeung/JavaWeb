@@ -6,12 +6,12 @@
   <display-name>Archetype Created Web Application</display-name>
 
   <servlet>
-    <servlet-name>OneServlet</servlet-name>
-    <servlet-class>com.dgpalife.servlet.OneServlet</servlet-class>
+    <servlet-name>com.dgpalife.controller.OneServlet</servlet-name>
+    <servlet-class>com.dgpalife.servlet.com.dgpalife.controller.OneServlet</servlet-class>
   </servlet>
 
   <servlet-mapping>
-    <servlet-name>OneServlet</servlet-name>
+    <servlet-name>com.dgpalife.controller.OneServlet</servlet-name>
     <url-pattern>/one.do</url-pattern>
   </servlet-mapping>
   
