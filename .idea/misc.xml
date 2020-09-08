@@ -1,8 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="FrameworkDetectionExcludesConfiguration">
+    <file type="web" url="file://$PROJECT_DIR$/_01_exam" />
+    <file type="web" url="file://$PROJECT_DIR$/_02_exam_question" />
+    <file type="web" url="file://$PROJECT_DIR$/_03_exam_usermanager" />
     <file type="web" url="file://$PROJECT_DIR$/Cookie" />
+    <file type="web" url="file://$PROJECT_DIR$/EL_01" />
+    <file type="web" url="file://$PROJECT_DIR$/Filter" />
     <file type="web" url="file://$PROJECT_DIR$/Generator" />
+    <file type="web" url="file://$PROJECT_DIR$/JSP_01" />
+    <file type="web" url="file://$PROJECT_DIR$/listener" />
+    <file type="web" url="file://$PROJECT_DIR$/Listener_JDBC_01" />
+    <file type="web" url="file://$PROJECT_DIR$/Listener_JDBC_02" />
+    <file type="web" url="file://$PROJECT_DIR$/Listener_JDBC_03" />
+    <file type="web" url="file://$PROJECT_DIR$/Listener_JDBC_04" />
+    <file type="web" url="file://$PROJECT_DIR$/Servlet_JDBC" />
+    <file type="web" url="file://$PROJECT_DIR$/Servlet_JSP_01" />
+    <file type="web" url="file://$PROJECT_DIR$/Servlet_JSP_02" />
+    <file type="web" url="file://$PROJECT_DIR$/Servlet_JSP_03" />
     <file type="web" url="file://$PROJECT_DIR$/ServletTest" />
     <file type="web" url="file://$PROJECT_DIR$/Session" />
   </component>
@@ -12,6 +27,21 @@
         <option value="$PROJECT_DIR$/ServletTest/pom.xml" />
         <option value="$PROJECT_DIR$/Generator/pom.xml" />
         <option value="$PROJECT_DIR$/Session/pom.xml" />
+        <option value="$PROJECT_DIR$/listener/pom.xml" />
+        <option value="$PROJECT_DIR$/Filter/pom.xml" />
+        <option value="$PROJECT_DIR$/Servlet_JDBC/pom.xml" />
+        <option value="$PROJECT_DIR$/Listener_JDBC/pom.xml" />
+        <option value="$PROJECT_DIR$/Listener_JDBC_02/pom.xml" />
+        <option value="$PROJECT_DIR$/Listener_JDBC_03/pom.xml" />
+        <option value="$PROJECT_DIR$/Listener_JDBC_04/pom.xml" />
+        <option value="$PROJECT_DIR$/JSP_01/pom.xml" />
+        <option value="$PROJECT_DIR$/Servlet_JSP_01/pom.xml" />
+        <option value="$PROJECT_DIR$/Servlet_JSP_02/pom.xml" />
+        <option value="$PROJECT_DIR$/Servlet_JSP_03/pom.xml" />
+        <option value="$PROJECT_DIR$/EL_01/pom.xml" />
+        <option value="$PROJECT_DIR$/_01_exam/pom.xml" />
+        <option value="$PROJECT_DIR$/_02_exam_question/pom.xml" />
+        <option value="$PROJECT_DIR$/_03_exam_usermanager/pom.xml" />
       </list>
     </option>
   </component>

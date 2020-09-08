@@ -1,0 +1,22 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="_03_exam_usermanager:war exploded">
+    <output-path>$PROJECT_DIR$/_03_exam_usermanager/target/03_exam_usermanager</output-path>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="_03_exam_usermanager" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="Maven: javax.servlet:javax.servlet-api:4.0.1" />
+          <element id="library" level="project" name="Maven: mysql:mysql-connector-java:5.1.46" />
+          <element id="library" level="project" name="Maven: jstl:jstl:1.2" />
+          <element id="library" level="project" name="Maven: taglibs:standard:1.1.2" />
+        </element>
+      </element>
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/_03_exam_usermanager/target/03_exam_usermanager/META-INF/MANIFEST.MF" />
+      </element>
+      <element id="javaee-facet-resources" facet="_03_exam_usermanager/web/Web" />
+    </root>
+  </artifact>
+</component>

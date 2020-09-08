@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="Listener_JDBC:war">
+    <output-path>$PROJECT_DIR$/Listener_JDBC/target</output-path>
+    <root id="archive" name="Listener_JDBC.war">
+      <element id="artifact" artifact-name="Listener_JDBC:war exploded" />
+    </root>
+  </artifact>
+</component>

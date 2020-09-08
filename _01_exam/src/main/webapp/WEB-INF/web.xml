@@ -6,7 +6,7 @@
   <display-name>Archetype Created Web Application</display-name>
   <servlet>
     <servlet-name>QuestionAddServlet</servlet-name>
-    <servlet-class>com.dgpalife.controller.QuestionAddServlet</servlet-class>
+    <servlet-class>com.dgpalife.controller.question.QuestionAddServlet</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>QuestionAddServlet</servlet-name>
@@ -15,7 +15,7 @@
 
   <servlet>
     <servlet-name>QuestionFindServlet</servlet-name>
-    <servlet-class>com.dgpalife.controller.QuestionFindServlet</servlet-class>
+    <servlet-class>com.dgpalife.controller.question.QuestionFindServlet</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>QuestionFindServlet</servlet-name>
@@ -23,7 +23,7 @@
   </servlet-mapping>
   <servlet>
     <servlet-name>QuestionDeleteServlet</servlet-name>
-    <servlet-class>com.dgpalife.controller.QuestionDeleteServlet</servlet-class>
+    <servlet-class>com.dgpalife.controller.question.QuestionDeleteServlet</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>QuestionDeleteServlet</servlet-name>
@@ -31,7 +31,7 @@
   </servlet-mapping>
   <servlet>
     <servlet-name>QuestionFindByIdServlet</servlet-name>
-    <servlet-class>com.dgpalife.controller.QuestionFindByIdServlet</servlet-class>
+    <servlet-class>com.dgpalife.controller.question.QuestionFindByIdServlet</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>QuestionFindByIdServlet</servlet-name>
@@ -39,7 +39,7 @@
   </servlet-mapping>
   <servlet>
     <servlet-name>QuestionUpdateServlet</servlet-name>
-    <servlet-class>com.dgpalife.controller.QuestionUpdateServlet</servlet-class>
+    <servlet-class>com.dgpalife.controller.question.QuestionUpdateServlet</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>QuestionUpdateServlet</servlet-name>
