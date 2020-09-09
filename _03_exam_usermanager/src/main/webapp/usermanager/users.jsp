@@ -16,8 +16,62 @@
     <title>Insert title here</title>
     <title>Insert title here</title>
     <link href="../style/style.css" rel="stylesheet" type="text/css" />
-
+    <script type="text/javascript" src="/js/jquery-3.3.1.js"></script>
     <script type="text/javascript">
+
+        $(function () {
+            $("#ck").click(fun1);
+            $(":checkbox:gt(0)").click(fun2);
+            $("table tr:gt(0)").mouseover(fun3);
+            $("table tr:gt(0)").mouseout(fun4);
+        })
+
+        //1.标题行checkbox影响数据行checkbox的【选中状态】
+        function fun1() {
+            if($("#ck").prop("checked") == true){
+                $(":checkbox:gt(0)").prop("checked",true)
+            }else{
+                $(":checkbox:gt(0)").prop("checked",false)
+            }
+            fun5();
+        }
+
+        //2.数据行反向影响标题行
+        function fun2() {
+            var num1 = $(":checkbox:gt(0):checked").length;
+            var num2 = $(":checkbox:gt(0)").length;
+            if(num1 == num2){
+                $("#ck").prop("checked",true);
+            }else {
+                $("#ck").prop("checked",false);
+            }
+            fun5();
+        }
+
+        //3.鼠标悬停在tr标签上方是，将tr标签背景颜色设置红色
+        function fun3() {
+            $(this).css("backgroundColor","red");
+        }
+
+        function fun4() {
+            $(this).css("backgroundColor","white");
+        }
+        //4.根据用户选择，来决定【更新按钮】和【删除按钮】是否可用
+        function fun5() {
+            var num1 = $(":checkbox:gt(0):checked").length;
+            if(num1==0){
+                $("#updateBtn").prop("disabled",true);
+                $("#deleteBtn").prop("disabled",true);
+            }else if(num1==1){
+                $("#updateBtn").prop("disabled",false);
+                $("#deleteBtn").prop("disabled",false);
+            }else{
+                $("#updateBtn").prop("disabled",true);
+                $("#deleteBtn").prop("disabled",false);
+            }
+        }
+
+        //5.通知异步请求对象，代替浏览器将需要删除的用户编号发送到服务端
         function deleteUser(){
             if(confirm("确定删除")){
 
@@ -39,8 +93,8 @@
                 用户管理
                 <span style="float: right;margin-right: 20px">
 						<input type="button" value="添加" onclick="document.location='/usermanager/userAdd.html'" style="width: 54px; height: 20px; margin-left: 15px;">
-						<input type="button" value="修改"   style="width: 54px; height: 20px; margin-left: 15px;">
-						<input type="button" value="删除" onclick="confirm('确定要删除吗')" style="width: 54px; height: 20px; margin-left: 15px;">
+						<input type="button" value="修改" id="updateBtn" disabled style="width: 54px; height: 20px; margin-left: 15px;">
+						<input type="button" value="删除" id="deleteBtn" disabled onclick="confirm('确定要删除吗')" style="width: 54px; height: 20px; margin-left: 15px;">
 						</span>
             </p>
         </div>
@@ -52,7 +106,7 @@
                    style="background: #BAC2CF; font-size: 14px;">
                     <tr
                         style="background: #F6F6F6; border: 0; text-align: center; line-height: 25px;">
-                    <td width="6%" height="26" background="../images/tab_14.gif" class="STYLE1"><div align="center" class="STYLE2 STYLE1"><input type="checkbox" name="ck" value="checkbox" /></div></td>
+                    <td width="6%" height="26" background="../images/tab_14.gif" class="STYLE1"><div align="center" class="STYLE2 STYLE1"><input type="checkbox" name="ck" id="ck" value="checkbox" /></div></td>
 
                     <td
                             style="color: #2B67D7; font-size: 14px; text-align: center; font-weight: bold;">
