@@ -74,9 +74,36 @@
         //5.通知异步请求对象，代替浏览器将需要删除的用户编号发送到服务端
         function deleteUser(){
             if(confirm("确定删除")){
-
+                fun6();
             }else{
                 return false;
+            }
+        }
+
+        function fun6() {
+            var params = null;
+            $(":checkbox:checked").each(function (index,domObj) {
+                if(params == null){
+                    params = "id" + $(domObj).val();
+                }else {
+                    params = params + "&id" + $(domObj).val();
+                }
+            })
+
+            $.get(
+                "/exam/user/delete.do",
+                params,
+                fun7,
+                "text"
+            );
+
+        }
+        
+        function fun7(data) {
+            if(data=='0'){
+                alert("删除错误，请联系管理员处理")
+            }else{
+                $(":checkbox:checked").parent().parent().parent().remove()
             }
         }
     </script>
@@ -94,7 +121,7 @@
                 <span style="float: right;margin-right: 20px">
 						<input type="button" value="添加" onclick="document.location='/usermanager/userAdd.html'" style="width: 54px; height: 20px; margin-left: 15px;">
 						<input type="button" value="修改" id="updateBtn" disabled style="width: 54px; height: 20px; margin-left: 15px;">
-						<input type="button" value="删除" id="deleteBtn" disabled onclick="confirm('确定要删除吗')" style="width: 54px; height: 20px; margin-left: 15px;">
+						<input type="button" value="删除" id="deleteBtn" disabled onclick="deleteUser()" style="width: 54px; height: 20px; margin-left: 15px;">
 						</span>
             </p>
         </div>
