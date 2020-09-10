@@ -60,4 +60,12 @@
     <servlet-name>UserFindServlet</servlet-name>
     <url-pattern>/exam/usermanager/find.do</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <servlet-name>UserDeleteServlet</servlet-name>
+    <servlet-class>com.dgpalife.controller.usermanager.UserDeleteServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>UserDeleteServlet</servlet-name>
+    <url-pattern>/exam/user/delete.do</url-pattern>
+  </servlet-mapping>
 </web-app>

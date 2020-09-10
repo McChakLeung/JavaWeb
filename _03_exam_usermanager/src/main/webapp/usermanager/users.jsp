@@ -82,11 +82,13 @@
 
         function fun6() {
             var params = null;
-            $(":checkbox:checked").each(function (index,domObj) {
+            $(":checkbox(gt0):checked").each(function (index,domObj) {
                 if(params == null){
-                    params = "id" + $(domObj).val();
+                    params = "id=" + $(domObj).val();
+                    console.log(params)
                 }else {
-                    params = params + "&id" + $(domObj).val();
+                    params = params + "&id=" + $(domObj).val();
+                    console.log(params)
                 }
             })
 
@@ -163,7 +165,7 @@
                     <tr
                             style="background: #FFFFFF; border: 0; text-align: center; line-height: 25px;">
                         <td height="18" bgcolor="#FFFFFF"><div align="center" class="STYLE1">
-                            <input name="checkbox" type="checkbox" class="STYLE2" value="checkbox" />
+                            <input name="checkbox" type="checkbox" class="STYLE2" value="${user.id}" />
                         </div></td>
 
                         <td style="color: #666666; font-size: 14px;">

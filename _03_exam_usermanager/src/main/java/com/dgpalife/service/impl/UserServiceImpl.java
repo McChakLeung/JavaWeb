@@ -20,4 +20,9 @@ public class UserServiceImpl implements UserService {
     public List<User> findUser() {
         return userDao.findUser();
     }
+
+    @Override
+    public Integer deleteUser(String[] params) {
+        return userDao.deleteUser(params);
+    }
 }
