@@ -8,7 +8,7 @@
 		
 	<script type="text/javascript">
 		function deleteUser(){
-			if(confirm("'确定要删除吗'")){
+			if(confirm("确定删除")){
 				
 			}
 		}
@@ -25,9 +25,9 @@
 					<p>
 						用户管理
 						<span style="float: right;margin-right: 20px">
-						<input type="button" value="添加" onclick="" style="width: 54px; height: 20px; margin-left: 15px;">
-						<input type="button" value="修改" onclick=""  style="width: 54px; height: 20px; margin-left: 15px;">
-						<input type="button" value="删除" onclick="deleteUser()" style="width: 54px; height: 20px; margin-left: 15px;">
+						<input type="button" value="添加" onclick="document.location='./userAdd.html'" style="width: 54px; height: 20px; margin-left: 15px;">
+						<input type="button" value="修改" onclick="document.location='./userEdit.html'"  style="width: 54px; height: 20px; margin-left: 15px;">
+						<input type="button" value="删除" onclick="confirm('确定要删除吗')" style="width: 54px; height: 20px; margin-left: 15px;">
 						</span>
 					</p>
 				</div>

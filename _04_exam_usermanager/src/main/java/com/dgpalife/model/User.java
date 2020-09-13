@@ -14,6 +14,15 @@ public class User {
 
     private String registDate;
 
+    public User(Integer id, String username, String pwd, String email, String telephone, String registDate) {
+        this.id = id;
+        this.username = username;
+        this.pwd = pwd;
+        this.email = email;
+        this.telephone = telephone;
+        this.registDate = registDate;
+    }
+
     public User(String username, String pwd, String email, String telephone) {
         this.username = username;
         this.pwd = pwd;
@@ -21,10 +30,17 @@ public class User {
         this.telephone = telephone;
     }
 
-    public User(Integer id, String username, String pwd, String email, String telephone, String registDate) {
-        this.id = id;
+    public User(String username, String pwd, String email, String telephone, String registDate) {
         this.username = username;
         this.pwd = pwd;
+        this.email = email;
+        this.telephone = telephone;
+        this.registDate = registDate;
+    }
+
+    public User(Integer id, String username, String email, String telephone, String registDate) {
+        this.id = id;
+        this.username = username;
         this.email = email;
         this.telephone = telephone;
         this.registDate = registDate;

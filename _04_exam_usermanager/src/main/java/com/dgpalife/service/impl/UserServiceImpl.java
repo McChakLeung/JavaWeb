@@ -5,12 +5,20 @@ import com.dgpalife.dao.impl.TUserDaoImpl;
 import com.dgpalife.model.User;
 import com.dgpalife.service.UserService;
 
+import java.util.List;
+
 public class UserServiceImpl implements UserService {
 
-    private TUserDao userDao = new TUserDaoImpl();
+    private TUserDao tUserDao = new TUserDaoImpl();
 
     @Override
     public void addUser(User user) {
-        userDao.addUser(user);
+        tUserDao.addUser(user);
+    }
+
+    @Override
+    public List<User> findUser() {
+        List<User> userList = tUserDao.findUser();
+        return userList;
     }
 }

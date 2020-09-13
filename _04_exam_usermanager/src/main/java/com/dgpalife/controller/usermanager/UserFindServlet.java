@@ -9,24 +9,21 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.util.List;
 
-public class UserAddServlet extends HttpServlet {
+public class UserFindServlet extends HttpServlet {
 
     private UserService userService = new UserServiceImpl();
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        //1.接收request传入的数据
-        String username = req.getParameter("username");
-        String pwd = req.getParameter("pwd");
-        String email = req.getParameter("email");
-        String telephone = req.getParameter("telephone");
-        User user = new User(username,pwd,email,telephone);
+        //1.从service层中查询数据库数据
+        List<User> userList = userService.findUser();
 
-        //2.通过service层处理数据
-        userService.addUser(user);
+        //2.将数据库的数据存放在request对象中
+        req.setAttribute("userList",userList);
 
-        //3.重定向至查询页面
-        resp.sendRedirect("/exam/usermanager/find.do");
+        //3.请求转发至jsp页面
+        req.getRequestDispatcher("/usermanager/user.jsp").forward(req,resp);
     }
 }
