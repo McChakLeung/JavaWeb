@@ -21,6 +21,12 @@
         $(function () {
             //绑定标题行第一个checkbox的单击状态
             $(":checkbox:first").click(fun1);
+            //绑定数据行的checkbox，影响标题行的checkbox状态
+            $(":checkbox:gt(0)").click(fun2);
+            //选中的行改变颜色
+            $("table tr:gt(0)").mouseover(fun3);
+            //未选中的行改变颜色
+            $("table tr:gt(0)").mouseout(fun4);
         })
 
         function fun1() {
@@ -29,6 +35,40 @@
                 $(":checkbox:gt(0)").prop("checked",true)
             }else{
                 $(":checkbox:gt(0)").prop("checked",false)
+            }
+            fun5();
+        }
+
+        function fun2() {
+            var num1 = $(":checkbox:gt(0):checked").length;
+            var num2 = $(":checkbox:gt(0)").length;
+            if(num1 == num2){
+                $(":checkbox:first").prop("checked",true)
+            }else{
+                $(":checkbox:first").prop("checked",false)
+            }
+            fun5();
+        }
+
+        function fun3() {
+            $(this).css("backgroundColor","red");
+        }
+
+        function fun4() {
+            $(this).css("backgroundColor","white");
+        }
+
+        function fun5() {
+            var flag = $(":checkbox:gt(0):checked").length;
+            if(flag==0){
+                $("#updateBtn").prop("disabled",true);
+                $("#deleteBtn").prop("disabled",true);
+            }else if(flag==1){
+                $("#updateBtn").prop("disabled",false);
+                $("#deleteBtn").prop("disabled",false);
+            }else{
+                $("#updateBtn").prop("disabled",true);
+                $("#deleteBtn").prop("disabled",false);
             }
         }
 
@@ -51,8 +91,8 @@
                 用户管理
                 <span style="float: right;margin-right: 20px">
 						<input type="button" value="添加" onclick="document.location='./userAdd.html'" style="width: 54px; height: 20px; margin-left: 15px;">
-						<input type="button" value="修改" onclick="document.location='./userEdit.html'"  style="width: 54px; height: 20px; margin-left: 15px;">
-						<input type="button" value="删除" onclick="deleteUser()" style="width: 54px; height: 20px; margin-left: 15px;">
+						<input type="button" value="修改" id="updateBtn" disabled onclick="document.location='./userEdit.html'"  style="width: 54px; height: 20px; margin-left: 15px;">
+						<input type="button" value="删除" id="deleteBtn" disabled onclick="deleteUser()" style="width: 54px; height: 20px; margin-left: 15px;">
 						</span>
             </p>
         </div>
