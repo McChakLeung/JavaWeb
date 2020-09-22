@@ -74,9 +74,37 @@
 
         function deleteUser(){
             if(confirm("确定删除?")){
-
+                fun6();
             }
         }
+        
+        function fun6() {
+            var param = null;
+            $(":checkbox:gt(0):checked").each(function (index,domObj) {
+                if(param==null){
+                    param = "id=" + $(domObj).val()
+                }else{
+                    param = param + "&id=" + $(domObj).val()
+                }
+            })
+
+            $.get(
+                "/exam/usermanager/delete.do",
+                param,
+                fun7,
+                "text"
+            )
+        }
+
+        function fun7(data) {
+            if(data=='0'){
+                alert("删除错误，请联系管理员处理")
+            }else{
+                $(":checkbox:checked").parent().parent().parent().remove();
+            }
+        }
+
+
     </script>
 </head>
 <!-- 去除纵向滚动条  style="overflow:scroll;overflow-y:hidden" -->
@@ -134,7 +162,7 @@
                     <tr
                             style="background: #FFFFFF; border: 0; text-align: center; line-height: 25px;">
                         <td height="18" bgcolor="#FFFFFF"><div align="center" class="STYLE1">
-                            <input name="checkbox" type="checkbox" class="STYLE2" value="checkbox" />
+                            <input name="checkbox" type="checkbox" class="STYLE2" value="${user.id}" />
                         </div></td>
 
                         <td style="color: #666666; font-size: 14px;">

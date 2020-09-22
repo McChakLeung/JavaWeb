@@ -21,4 +21,9 @@ public class UserServiceImpl implements UserService {
         List<User> userList = tUserDao.findUser();
         return userList;
     }
+
+    @Override
+    public void deleteUserByBatch(String[] param) {
+        tUserDao.deleteUserByBatch(param);
+    }
 }

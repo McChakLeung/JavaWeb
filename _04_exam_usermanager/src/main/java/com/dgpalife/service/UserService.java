@@ -9,4 +9,6 @@ public interface UserService {
     void addUser(User user);
 
     List<User> findUser();
+
+    void deleteUserByBatch(String[] param);
 }

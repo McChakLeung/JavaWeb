@@ -55,4 +55,22 @@ public class TUserDaoImpl implements TUserDao{
 
         return userList;
     }
+
+    @Override
+    public void deleteUserByBatch(String[] param) {
+        String sql = "delete from user where id = ?";
+        PreparedStatement ps = null;
+        try{
+            ps = DBUtil.getPrepardStatement(sql);
+            for(int i = 0; i<param.length;i++){
+                ps.setInt(1,Integer.valueOf(param[i]));
+                ps.addBatch();
+            }
+            ps.executeBatch();
+        }catch (Exception e){
+            e.printStackTrace();
+        }finally {
+            DBUtil.close();
+        }
+    }
 }
