@@ -17,4 +17,6 @@ public interface TQuestionDao {
     void updateQuestion(Question question);
 
     void deleteQuestion(Integer id);
+
+    List<Question> findRandomQuestionList();
 }

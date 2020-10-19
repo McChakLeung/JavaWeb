@@ -142,4 +142,31 @@ public class TQuestionDaoImpl implements TQuestionDao {
             DBUtil.close();
         }
     }
+
+    @Override
+    public List<Question> findRandomQuestionList() {
+        String sql = "select * from question order by rand() limit 3";
+        PreparedStatement ps = DBUtil.getPreparedStatement(sql);
+        ResultSet rs = null;
+        List<Question> questionList = new ArrayList<>();
+        try{
+            rs = ps.executeQuery();
+            while(rs.next()){
+                Integer id = rs.getInt(1);
+                String title = rs.getString(2);
+                String optionA = rs.getString(3);
+                String optionB = rs.getString(4);
+                String optionC = rs.getString(5);
+                String optionD = rs.getString(6);
+                String answer = rs.getString(7);
+                Question question = new Question(id,title,optionA,optionB,optionC,optionD,answer);
+                questionList.add(question);
+            }
+        }catch (Exception e){
+            e.printStackTrace();
+        }finally {
+            DBUtil.close(rs);
+        }
+        return questionList;
+    }
 }

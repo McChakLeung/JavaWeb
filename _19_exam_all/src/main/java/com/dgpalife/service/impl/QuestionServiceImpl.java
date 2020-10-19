@@ -52,4 +52,9 @@ public class QuestionServiceImpl implements QuestionService {
     public void deleteQuestion(Integer id) {
         questionDao.deleteQuestion(id);
     }
+
+    @Override
+    public List<Question> findRandomQuestionList() {
+        return questionDao.findRandomQuestionList();
+    }
 }

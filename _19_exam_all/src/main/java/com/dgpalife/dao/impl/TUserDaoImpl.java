@@ -141,4 +141,29 @@ public class TUserDaoImpl implements TUserDao {
             DBUtil.close();
         }
     }
+
+    @Override
+    public User findUserByUsernameAndPassword(String username, String password) {
+        String sql = "select * from user where username = ? and pwd = ?";
+        PreparedStatement ps = null;
+        ResultSet rs = null;
+        User user = null;
+        try{
+            ps = DBUtil.getPreparedStatement(sql);
+            ps.setString(1,username);
+            ps.setString(2,password);
+            rs = ps.executeQuery();
+            rs.next();
+            Integer id = rs.getInt(1);
+            String email = rs.getString(4);
+            String telephone = rs.getString(5);
+            String registDate = rs.getString(6);
+            user = new User(id,username,null,email,telephone,registDate);
+        }catch (Exception e){
+            e.printStackTrace();
+        }finally {
+            DBUtil.close(rs);
+        }
+        return user;
+    }
 }

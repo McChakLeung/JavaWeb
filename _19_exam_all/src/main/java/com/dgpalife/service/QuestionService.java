@@ -16,4 +16,6 @@ public interface QuestionService {
     void updateQuestion(Question question);
 
     void deleteQuestion(Integer id);
+
+    List<Question> findRandomQuestionList();
 }

@@ -1,84 +1,70 @@
 
 
+
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
-	<head>
+<head>
 
-		<title>My JSP 'login.jsp' starting page</title>
-
-		<meta http-equiv="pragma" content="no-cache">
-		<meta http-equiv="cache-control" content="no-cache">
-
-		<meta http-equiv="expires" content="0">
-		<meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
-		<meta http-equiv="description" content="This is my page">
-		<link href="style/login.css" rel="stylesheet" type="text/css">
-	</head>
-	<script type="text/javascript">
-	</script>
+	<title>My JSP 'login.jsp' starting page</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<link href="/style/login.css" rel="stylesheet" type="text/css">
+</head>
+<script type="text/javascript">
+</script>
 
 
-	<body>
-		<div id="login">
+<body>
+<div id="login">
 
-			<!--bj-->
-			<div class="bj">
-				<!--left-->
-				<div class="bj_left">
-					<img src="./images/login_left.jpg" />
-				</div>
-				<!--right-->
-				<div class="bj_right">
-					<!--rb-->
+	<!--bj-->
+	<div class="bj">
+		<!--left-->
+		<div class="bj_left">
+			<img src="/images/login_left.jpg" />
+		</div>
+		<!--right-->
+		<div class="bj_right">
+			<!--rb-->
 
-					<div align="left" class="rb">
+			<div align="left" class="rb">
 
-						<form action="#"
-							name="loginForm">
-							<font color="red"><span id="userpwd"></span>
-							</font>
-							<p>
-							”√ªß¥˙¬Î£∫
-								<input id="ucode" name="ucode" type="text" value=""
-									style="background: none; border: none; background: #FFFFFF; border: solid 1px #8AB0BB; text-align: left; width: 160px; height: 20px; padding-left: 5px; line-height: 20px;" />
-								<font color="red"><span id="uerror"></span>
-								</font>
+				<form action="/exam/user/login.do" method="get"
+					  name="loginForm">
+					<font color="red"><span id="userpwd"></span>
+					</font>
 
-							</p>
-							<br>
-							<p>
-								”√ªß√˚£∫&nbsp&nbsp
-								<input id="username" name="username" type="text" value=""
-									style="background: none; border: none; background: #FFFFFF; border: solid 1px #8AB0BB; text-align: left; width: 160px; height: 20px; padding-left: 5px; line-height: 20px;" />
-								<font color="red"><span id="uerror"></span>
-								</font>
+					<p>
+						Áî®Êà∑ÂêçÔºö
+						<input id="username" name="username" type="text" value=""
+							   style="background: none; border: none; background: #FFFFFF; border: solid 1px #8AB0BB; text-align: left; width: 160px; height: 20px; padding-left: 5px; line-height: 20px;" />
+						<font color="red"><span id="uerror"></span>
+						</font>
 
-							</p>
+					</p>
 
-							<br>
-							<p>
-								√‹&nbsp;&nbsp;¬Î£∫&nbsp&nbsp
-								<input name="password" type="password" value=""
-									style="background: none; border: none; background: #FFFFFF; border: solid 1px #8AB0BB; text-align: left; width: 160px; height: 20px; padding-left: 5px; line-height: 20px;" />
-							</p>
-							
-							<p style="margin-top: 10px;">
-								
-								
-								<input name="" type="reset"
-									value="÷ÿ&nbsp;&nbsp;÷√"
-									style="background: none; border: none; width: 70px; height: 23px; background: url(images/button.jpg) no-repeat; color: #FFFFFF; margin-left: 5px; font-size: 14px;" />
-									&nbsp;&nbsp;&nbsp;&nbsp;		&nbsp;&nbsp;&nbsp;&nbsp;
-									<input name="username" type="button" value="»∑&nbsp;&nbsp;»œ"
-									onclick="document.location.href='index.html'"
-									style="background: none; border: none; width: 70px; height: 23px; background: url(images/button.jpg) no-repeat; color: #FFFFFF; font-size: 14px;" />
-							</p>
+					<br>
+					<p>
+						ÂØÜ&nbsp;Á†ÅÔºö
+						<input name="password" type="password" value=""
+							   style="background: none; border: none; background: #FFFFFF; border: solid 1px #8AB0BB; text-align: left; width: 160px; height: 20px; padding-left: 5px; line-height: 20px;" />
+					</p>
 
-						</form>
-					</div>
-				</div>
+					<p style="margin-top: 10px;">
+
+
+						<input name="" type="reset"
+							   value="Èáç&nbsp;&nbsp;ÁΩÆ"
+							   style="background: none; border: none; width: 70px; height: 23px; background: url(/images/button.jpg) no-repeat; color: #FFFFFF; margin-left: 5px; font-size: 14px;" />
+						&nbsp;&nbsp;&nbsp;&nbsp;
+						<input name="" type="submit" value="Á°Æ&nbsp;&nbsp;ËÆ§"
+							   style="background: none; border: none; width: 70px; height: 23px; background: url(/images/button.jpg) no-repeat; color: #FFFFFF; font-size: 14px;" />
+					</p>
+
+				</form>
 			</div>
 		</div>
+	</div>
+</div>
 
-	</body>
+</body>
 </html>
